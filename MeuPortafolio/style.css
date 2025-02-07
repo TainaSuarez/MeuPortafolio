@@ -1,0 +1,552 @@
+:root {
+  --bg-color: #f5f5f5; /* Fondo claro */
+  --text-color: #111; /* Texto más oscuro para mejor contraste */
+  --card-bg: rgba(255, 255, 255, 0.8); }
+
+[data-theme="dark"] {
+  --bg-color: #121212; /* Fondo oscuro */
+  --text-color: #fff; /* Texto blanco */
+  --card-bg: rgba(30, 30, 30, 0.8);}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.header {
+  position: fixed; /* Fija el header en la parte superior */
+  top: 0; /* Asegura que esté en la parte superior */
+  left: 0; /* Alineado con el borde izquierdo */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  background: var(--card-bg); /* Mantiene el fondo dinámico */
+  padding: 10px 60px; /* Espaciado interno */
+  display: flex; /* Diseño flexible */
+  justify-content: space-between; /* Distribuye los elementos */
+  align-items: center; /* Centra los elementos verticalmente */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.205); /* Agrega una sombra */
+  z-index: 1000; /* Asegura que el header esté sobre otros elementos */
+  height: 60px; /* Fija la altura del header */
+}
+
+main {
+  margin-top: 70px; /* Espacio para que el header no cubra el contenido */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-right: auto;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.toggle-theme {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 50%; /* Hace el botón circular */
+  padding: 10px; /* Tamaño interno del botón */
+  font-size: 1.5rem; /* Tamaño del ícono */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px; /* Ajusta la posición del botón */
+  margin-right: 80px; /* Mueve más el botón hacia la izquierda */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.575);
+  transition: transform 0.3s ease;
+}
+
+.toggle-theme:hover {
+  transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
+}
+
+.about-me {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 40px 60px;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.hero-image {
+  max-width: 300px;
+  height: auto;
+  flex-shrink: 0;
+  margin-left: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid var(--card-bg);
+}
+
+.about-info {
+  flex: 1;
+}
+
+.about-info h2 {
+  font-size: 2rem;
+}
+
+.details-container {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.personal-info p,
+.personal-info strong {
+  font-size: 1.1rem;
+}
+
+.interests h3 {
+  font-size: 1.3rem;
+}
+
+.interests .interest {
+  font-size: 1rem;
+}
+
+.personal-info,
+.interests {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.interests {
+  text-align: left;
+}
+
+.interest-icons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.interest {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--card-bg);
+  padding: 6px 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cv-button-container {
+  text-align: center;
+  margin-top: 40px;
+  display: flex; /* Flexbox para alinear botones */
+  justify-content: center; /* Centra los botones */
+  gap: 15px; /* Espaciado entre botones */
+}
+
+.download-cv {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.download-cv:hover {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.copy-email-btn {
+  padding: 10px 20px;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.copy-email-btn:hover {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transform: scale(1.1);
+}
+
+.skills-separator {
+  border-top: 2px solid var(--text-color);
+  width: 50%;
+  margin: 30px auto;
+}
+
+/* SEPARACIÓN EXTRA ENTRE SECCIONES */
+#skills {
+  margin-bottom: 80px; /* Más espacio antes de Portafolio */
+}
+
+#portfolio {
+  margin-top: 80px; /* Más espacio después de Habilidades */
+}
+
+.skills h2, .portfolio h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cards,
+.projects {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card,
+.project {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+}
+:root {
+  --footer-bg: #f5f5f5; /* Fondo del rodapé en modo claro */
+  --footer-text-color: #333; /* Texto en modo claro */
+  --footer-icon-color: #007bff; /* Azul para íconos en modo claro */
+  --footer-button-bg: #007bff; /* Fondo del botón en modo claro */
+  --footer-button-hover-bg: #0056b3; /* Hover del botón en modo claro */
+}
+
+[data-theme="dark"] {
+  --footer-bg: #121212; /* Fondo del rodapé en modo oscuro */
+  --footer-text-color: #fff; /* Texto en modo oscuro */
+  --footer-icon-color: #4caf50; /* Verde para íconos en modo oscuro */
+  --footer-button-bg: #4caf50; /* Fondo del botón en modo oscuro */
+  --footer-button-hover-bg: #388e3c; /* Hover del botón en modo oscuro */
+}
+
+.footer {
+  background-color: var(--footer-bg); /* Fondo dinámico según el modo */
+  color: var(--footer-text-color); /* Texto dinámico */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centrado del contenido */
+  font-size: 0.9rem; /* Tamaño compacto */
+  margin-top: 20px; /* Separación del contenido superior */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+.footer-links {
+  display: flex; /* Diseño en línea */
+  justify-content: center; /* Centrar los elementos */
+  flex-wrap: wrap; /* Permitir ajuste en varias filas */
+  gap: 20px; /* Espaciado entre elementos */
+}
+
+.footer-item {
+  display: flex; /* Alinear ícono y texto */
+  align-items: center; /* Centrado vertical */
+  gap: 10px; /* Espaciado entre ícono y texto */
+}
+
+.footer-item i {
+  font-size: 1.2rem; /* Tamaño de los íconos */
+  color: var(--footer-icon-color); /* Color dinámico de los íconos */
+}
+
+.footer-item a {
+  color: var(--footer-text-color); /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 0.9rem; /* Tamaño compacto */
+}
+
+.footer-item a:hover {
+  text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+.copy-email-btn {
+  margin-top: 20px; /* Espacio encima del botón */
+  background-color: var(--footer-button-bg); /* Fondo dinámico */
+  color: #fff; /* Texto blanco */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Tamaño del botón */
+  font-size: 0.9rem; /* Tamaño compacto */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.copy-email-btn:hover {
+  background-color: var(--footer-button-hover-bg); /* Hover dinámico */
+}
+/* ======= ESTILIZAÇÃO DA PÁGINA DO PROJETO (projeto1.html) ======= */
+#projeto-detalhe {
+  margin-top: 120px; /* Aumenta o espaçamento superior */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  text-align: center;
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#projeto-detalhe h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#projeto-detalhe img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#projeto-detalhe p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#projeto-detalhe ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: auto;
+  max-width: 600px;
+}
+
+#projeto-detalhe ul li {
+  font-size: 1rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+/* ======= BOTÕES ======= */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn-voltar {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #6c757d;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-voltar:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
+}
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #333;
+  --card-bg: #fff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #fff;
+  --card-bg: #1e1e1e;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease; /* Transição suave entre os temas */
+}
+.projects .project img {
+  width: 100%; /* Ajusta à largura do card */
+  max-width: 150px; /* Limita el tamaño máximo de la imagen */
+  height: auto; /* Mantiene la proporción */
+  margin: 0 auto; /* Centraliza dentro del card */
+  display: block; /* Asegura el alineamiento */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: transform 0.3s ease; /* Suavidad en la transición */
+}
+
+.projects .project img:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+.projects .project a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: var(--text-color); /* Usa la variable de color dinámica */
+  transition: color 0.3s ease; /* Suavidad al cambiar de modo */
+}
+
+.projects .project a:hover {
+  color: var(--card-bg); /* Cambia el color al pasar el mouse */
+  text-decoration: underline; /* O agrega subrayado si lo prefieres */
+}
+
+.projects .project h3,
+.projects .project p {
+  margin: 10px 0; /* Ajusta los márgenes */
+  color: var(--text-color); /* Asegura que el texto también cambie según el modo */
+  text-align: center; /* Centra el texto */
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+#projeto-detalhe {
+  margin-top: 120px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  text-align: center;
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#projeto-detalhe h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+#projeto-detalhe img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#projeto-detalhe p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#projeto-detalhe ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: auto;
+  max-width: 600px;
+}
+
+#projeto-detalhe ul li {
+  font-size: 1rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn-voltar {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #6c757d;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-voltar:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+  gap: 15px; /* Espaciado entre las tarjetas */
+  justify-items: center; /* Centra cada tarjeta dentro de su columna */
+  width: 1%; /* Asegura que la cuadrícula ocupe todo el ancho disponible */
+  margin: 0 auto; /* Centra la cuadrícula en la pantalla */
+}
+
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+
+
