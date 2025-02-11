@@ -26,7 +26,7 @@
 - 📩 Email: devsuareztaina@gmail.com
 - 💼 LinkedIn:[ linkedin.com/in/tuusuario](https://www.linkedin.com/in/paula-suarez-3455a72b3/)
 
-🔗 **Puedes verlo en vivo aquí:** [Coloca aquí el enlace a tu portafolio]  
+🔗 **Puedes verlo en vivo aquí:** (https://meu-portafolio-e8qs-j7ycspqyf-tainas-projects-8bd1b82b.vercel.app/) 
 
 ## 🚀 Instalación y Uso  
 
