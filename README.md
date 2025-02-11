@@ -32,4 +32,4 @@
 
 1. Clona este repositorio:  
    ```bash
-   git clone https://github.com/tuusuario/tu-repo.git
+   git clone https://github.com/TainaSuarez/MeuPortafolio.git
